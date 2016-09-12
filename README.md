@@ -29,6 +29,7 @@ $ npm run lint
 - validate user input (all fields are required)
 - implement `view` action for locations (open map & device vibration)
 - use lodash for store handling
+- look deeper into dev vs prod setup
 - sorting (alphabetical order)
 - give a way to group locations by category
 - allow relating multiple categories to a single item
