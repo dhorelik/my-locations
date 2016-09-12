@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "rules": {
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "yield-star-spacing": ["error", "after"],
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4]
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "paper": true
+  }
+}

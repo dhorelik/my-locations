@@ -1,0 +1,26 @@
+.button {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 15px;
+    padding: 7px;
+    border: 1px solid #2274a5;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        background: #2274a5;
+    }
+
+    span {
+        padding-left: 27px;
+    }
+
+    .icon {
+        position: absolute;
+        left: 7px;
+    }
+}

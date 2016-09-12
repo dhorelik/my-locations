@@ -1,0 +1,23 @@
+@import "reset";
+@import "fonts";
+@import "footer";
+@import "helpers";
+@import "icons";
+
+.content {
+    padding: 15px;
+}
+
+:global .app-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+:global .app-title {
+    overflow: hidden;
+    padding: 0 5px 15px;
+
+    h2 {
+        float: left;
+    }
+}

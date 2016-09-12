@@ -1,0 +1,14 @@
+.category {
+    padding: 8px 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background: #f9f9f9;
+    }
+
+    &.selected {
+        color: #fff;
+        background: #aaa;
+    }
+}

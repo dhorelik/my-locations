@@ -1,0 +1,29 @@
+// sticky footer
+html,
+body {
+    height: 100%;
+}
+
+:global .app,
+:global .app > div {
+    height: 100%;
+
+    &-content {
+        min-height: 100%;
+        margin-bottom: -50px;
+
+        &:after {
+            content: "";
+            display: block;
+        }
+    }
+
+    &-content:after {
+        height: 50px;
+    }
+
+    &-footer {
+        height: 30px;
+        padding: 10px 0;
+    }
+}
