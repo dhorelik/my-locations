@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { omit } from 'lodash'
 import classNames from 'classnames'
 import styles from './item.scss'
 import Form from '../Form'
@@ -28,19 +29,12 @@ export default class Item extends Component {
      * gets the data used for form fields construction
      * @returns {*}
      */
-    getFormFields (baseFields, data) {
-        if (this.props.type === 'location') {
-            return (
-                {
-                    ...baseFields,
-                    address: data.address,
-                    coordinates: data.coordinates,
-                    category: data.category
-                }
-            )
-        }
-
-        return baseFields
+    getFormFields (data) {
+        return omit(data, [
+            'id',
+            'isSelected',
+            'isEdited'
+        ])
     }
 
     /**
@@ -62,7 +56,7 @@ export default class Item extends Component {
     render () {
         const data = this.props.data
         const itemClasses = classNames(styles.item, {[styles.selected]: data.isSelected})
-        const formFields = this.getFormFields({ name: data.name }, data)
+        const formFields = this.getFormFields(data)
         const itemDetails = this.getItemDetails(data)
 
         return (

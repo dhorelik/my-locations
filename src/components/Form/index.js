@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { forIn } from 'lodash'
 import styles from './form.scss'
 import Input from '../Input'
 import Select from '../Select'
@@ -41,7 +42,20 @@ export default class Form extends Component {
 
     handleSave (e) {
         e.preventDefault()
-        this.props.onSubmit(this.props.id, this.state)
+
+        this.isValid()
+            ? this.props.onSubmit(this.props.id, this.state)
+            : alert('please fill all fields')
+    }
+
+    isValid () {
+        let isValid = true
+
+        forIn(this.state, function (value) {
+            isValid = !!value
+        })
+
+        return isValid
     }
 
     render () {
