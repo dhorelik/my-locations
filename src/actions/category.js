@@ -34,10 +34,10 @@ export const editCategory = (id) => {
     }
 }
 
-export const submitFormCategory = (id, name) => {
+export const submitFormCategory = (id, state) => {
     return {
         type: SUBMIT_FORM_CATEGORY,
         id,
-        name
+        ...state
     }
 }

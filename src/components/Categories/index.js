@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import CategoryItem from '../CategoryItem'
+import Item from '../Item'
 import Actions from '../Actions'
 
 export default class Categories extends Component {
@@ -22,11 +22,12 @@ export default class Categories extends Component {
 
                 {Object.keys(this.props.categories).map((key) => {
                     return (
-                        <CategoryItem
+                        <Item
                             key={key}
-                            select={this.props.actions.selectCategory}
-                            submitForm={this.props.actions.submitFormCategory}
-                            {...this.props.categories[key]}
+                            type='category'
+                            data={{...this.props.categories[key]}}
+                            selectItem={this.props.actions.selectCategory}
+                            submitItemForm={this.props.actions.submitFormCategory}
                         />
                     )
                 })}

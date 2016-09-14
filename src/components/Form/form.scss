@@ -1,0 +1,22 @@
+.form {
+    margin: 0;
+    padding: 8px 5px;
+    border: 1px solid #c1c1c1;
+
+    .row {
+        display: block;
+        text-align: right;
+
+        .btn {
+            margin-left: 5px;
+            padding: 6px 10px;
+            border: 1px solid #c1c1c1;
+            background: #fff;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #f7f7f7;
+            }
+        }
+    }
+}

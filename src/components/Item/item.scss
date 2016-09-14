@@ -1,4 +1,4 @@
-.category {
+.item {
     padding: 8px 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -10,5 +10,9 @@
     &.selected {
         color: #fff;
         background: #aaa;
+    }
+
+    .details p {
+        font-size: 12px;
     }
 }

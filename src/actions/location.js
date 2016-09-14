@@ -47,6 +47,5 @@ export const submitFormLocation = (id, state) => {
         type: SUBMIT_FORM_LOCATION,
         id,
         state
-
     }
 }

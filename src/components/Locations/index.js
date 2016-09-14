@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import LocationItem from '../LocationItem'
+import Item from '../Item'
 import Actions from '../Actions'
 
 export default class Locations extends Component {
@@ -24,12 +24,13 @@ export default class Locations extends Component {
 
                 {Object.keys(this.props.locations).map((key) => {
                     return (
-                        <LocationItem
+                        <Item
                             key={key}
-                            select={this.props.actions.selectLocation}
-                            submitForm={this.props.actions.submitFormLocation}
+                            type='location'
+                            data={{...this.props.locations[key]}}
+                            selectItem={this.props.actions.selectLocation}
+                            submitItemForm={this.props.actions.submitFormLocation}
                             categoriesList={this.props.categoriesList}
-                            {...this.props.locations[key]}
                         />
                     )
                 })}
